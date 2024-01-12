@@ -1,0 +1,46 @@
+.add-dept {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 35px;
+  }
+  
+.add-dept h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+  .add-dept-form {
+    margin-top: 35px; 
+  }
+
+  .add-dept-form button{
+    margin:25px;
+    background-color:  #2c1e33;
+    color: white;
+    height: 30px;
+  }
+  
+  .existing-dept-ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .existig-dept-li {
+    margin: 15px 0;
+    font-family:'Times New Roman', Times, serif;
+  }
+
+  .existing-dept h3{
+    margin:25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  /* .existing-dept{
+    margin: 50px;
+  }  */
+
+.btn2{
+    border-radius: 7px;
+}
