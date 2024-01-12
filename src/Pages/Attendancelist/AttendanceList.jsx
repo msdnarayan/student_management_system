@@ -20,8 +20,8 @@ const AttendanceList = () => {
 
   return (
     <div>
-      <h2>Attendance Records</h2>
-      <table>
+      <h2 className='hd3'>Attendance Records</h2>
+      <table className='atten'>
         <thead>
           <tr>
             <th>AID</th>
