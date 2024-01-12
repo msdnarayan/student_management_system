@@ -65,13 +65,13 @@ function AddAttend() {
         }
       };
       return (
-        <div>
+        <div className='add-attendance-container'>
           <h2>Add Attendance</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className='add-attendance-form'>
             <label>
-              Select Student
-              <select name="rollno" value={formData.rollno} onChange={handleChange}>
-                <option value="" disabled>Select student</option>
+            Select Student
+              <select required name="rollno" value={formData.rollno} onChange={handleChange}>
+                <option value="" disabled>Select Student</option>
                 {students.map((student) => (
                   <option key={student.id} value={student.rollno}>
                     {student.sname}
@@ -80,16 +80,16 @@ function AddAttend() {
               </select>
             </label>
             <br />
-            <label>
-              Attendance
-              <input type="text" name="attend" value={formData.attend} onChange={handleChange} />
+            <label className='lbl1'>
+                Attendance
+              <input autoComplete='off' required type="text" name="attend" value={formData.attend} onChange={handleChange} />
             </label>
             <br />
-            <button type="submit">Submit</button>
+            <button type="submit">Add Attendance</button>
           </form>
         </div>
       );
     
 }
 
-export default AddAttend
+export default AddAttend
