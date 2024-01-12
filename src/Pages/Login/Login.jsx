@@ -49,31 +49,39 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div>
+    <div className='login'>
       <form onSubmit={handleSubmit}>
         <label>
-          Email:
+          {/* Email: */}
           <input
+            className='inp1'
             type="email"
             name="email"
+            // required
+            placeholder='Email'
             value={formData.email}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Password:
+          {/* Password: */}
           <input
+            className='inp1'
             type="password"
             name="password"
+            // required
+            placeholder='Password'
             value={formData.password}
             onChange={handleChange}
           />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <button type="submit" className='lg1'>Login</button>
+        <br></br>
       </form>
-      <button onClick={handleSignupClick}>Go to Signup</button>
+      <button onClick={handleSignupClick} className='lg1'>Go to Signup</button>
+      
    </div>
   );
 };
