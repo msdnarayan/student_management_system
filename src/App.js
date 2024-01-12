@@ -31,21 +31,24 @@ function App() {
     <Router>
     <div>
     
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Dashboard</Link>
-          </li>
-          <li>
+      <nav className='topnav'>
+        <div >
+          <ul>
+            <li>
+            <Link  to="/">Dashboard</Link>
+            </li>
+            <li>
             <Link to="/studdetails">Students</Link>
-          </li>
-          <li>
+            </li>
+            <li>
             <Link to="/triggers">Triggers</Link>
+            </li>
+            <li>
+          {isLoggedIn && <button onClick={handleLogout} className='btn1'>Logout</button>}
           </li>
-          {isLoggedIn && <button onClick={handleLogout}>Logout</button>}
 
-
-        </ul>
+          </ul>
+        </div>
       </nav>
           
       <hr />
