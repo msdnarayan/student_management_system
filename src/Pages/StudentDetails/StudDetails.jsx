@@ -102,8 +102,8 @@ const StudentList = () => {
   return (
     <div>
        <div className={selectedStudent ? 'blur-background' : ''}>
-      <h2>Student Details</h2>
-      <table>
+      <h2 className='hd1'>Student Details</h2>
+      <table className='stud1'>
         <thead>
           <tr>
             <th>Roll No</th>
@@ -112,7 +112,7 @@ const StudentList = () => {
             <th>Gender</th>
             <th>Branch</th>
             <th>Email</th>
-            <th>Number</th>
+            {/* <th>Number</th> */}
             <th>Address</th>
 
           </tr>
@@ -126,12 +126,12 @@ const StudentList = () => {
               <td>{student.gender}</td>
               <td>{student.branch}</td>
               <td>{student.email}</td>
-              <td>{student.num}</td>
+              {/* <td>{student.num}</td> */}
               <td>{student.address}</td>
               
               <td>
-                <button onClick={() => handleEditClick(student.id)}>Edit</button>
-                <button onClick={() => confirmDelete(student.id)}>Delete</button>
+                <button  onClick={() => handleEditClick(student.id)}>Edit</button>
+                <button  onClick={() => confirmDelete(student.id)}>Delete</button>
               </td>
             </tr>
           ))}
@@ -141,35 +141,52 @@ const StudentList = () => {
       {selectedStudent && (
          <div className="modal-overlay">
          <div className="modal-content">
-         <button onClick={handleCloseModal}>Close</button>
+         
 
           <h2>Edit Student</h2>
-          <div>
+          <div className='edit-main'>
+            <div className='edit'>
             <label>Roll No:</label>
-            <input type="text" name="rollno" value={editFormData.rollno} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="rollno" value={editFormData.rollno} onChange={handleInputChange} />
             <br/>
-            <label>Name:</label>
-            <input type="text" name="sname" value={editFormData.sname} onChange={handleInputChange} />
+            </div>
+            <div className='edit'>
+            <label>Name         :</label>
+            <input className='edit-sub' type="text" name="sname" value={editFormData.sname} onChange={handleInputChange} />
             <br/>
+            </div>
+            <div className='edit'>
             <label>Sem:</label>
-            <input type="text" name="sem" value={editFormData.sem} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="sem" value={editFormData.sem} onChange={handleInputChange} />
             <br/>
+            </div>
+            <div className='edit'>
             <label>Gender:</label>
-            <input type="text" name="gender" value={editFormData.gender} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="gender" value={editFormData.gender} onChange={handleInputChange} />
             <br/>
+            </div>
+            <div className='edit'>
             <label>Branch:</label>
-            <input type="text" name="branch" value={editFormData.branch} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="branch" value={editFormData.branch} onChange={handleInputChange} />
             <br/>
+            </div>
+            <div className='edit'>
             <label>Email:</label>
-            <input type="text" name="email" value={editFormData.email} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="email" value={editFormData.email} onChange={handleInputChange} />
             <br/>
+            </div>
+            {/* <div className='edit'>
             <label>Number:</label>
-            <input type="text" name="num" value={editFormData.num} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="num" value={editFormData.num} onChange={handleInputChange} />
             <br/>
+            </div> */}
+            <div className='edit'>
             <label>Address:</label>
-            <input type="text" name="address" value={editFormData.address} onChange={handleInputChange} />
+            <input className='edit-sub' type="text" name="address" value={editFormData.address} onChange={handleInputChange} />
+            </div>
           </div>
-          <button onClick={handleUpdate}>Update Student</button>
+          <button className='btn2' onClick={handleUpdate}>Update Student</button>
+          <button className='btn2' onClick={handleCloseModal}>Close</button>
         </div>
         </div>
       )}
