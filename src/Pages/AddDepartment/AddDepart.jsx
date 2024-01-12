@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './AddDepart.css'
 
 const AddDepart= () => {
   const [dept, setDept] = useState('');
@@ -51,25 +51,26 @@ const AddDepart= () => {
   };
 
   return (
-    <div>
+    <div className='add-dept'>
       <h2>Add Department</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='add-dept-form'>
         <label>
           Department Name:
           <input type="text" name="dept" value={dept} onChange={(e) => setDept(e.target.value)} />
         </label>
         <br />
-        <button type="submit">Add Department</button>
+        <button type="submit" className='btn2'>Add Department</button>
       </form>
-
+      <div className='existing-dept'>
       <h3>Existing Departments:</h3>
       <ul>
         {departments.map((department) => (
           <li key={department.cid}>{department.branch}</li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };
 
-export default AddDepart;
+export default AddDepart;
