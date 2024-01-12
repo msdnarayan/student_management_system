@@ -1,0 +1,45 @@
+.add-attendance-container {
+    text-align: center;
+    margin: 35px auto;
+  }
+  
+  .add-attendance-form {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 20px auto;
+  }
+  .lbl1{
+    margin-left: 13px;
+  }
+  .add-attendance-form label {
+    margin-bottom: 10px;
+  }
+  
+  .add-attendance-form select{
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    margin-left: 15px;
+  }
+  .add-attendance-form input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 15px;
+    
+    margin-left: 30px;
+  }
+  
+  .add-attendance-form button {
+    background-color: #2c1e33;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* .add-attendance-form button:hover {
+    background-color:#42345a;
+  } */
