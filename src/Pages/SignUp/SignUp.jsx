@@ -47,6 +47,7 @@ const Signup = () => {
         const data = await response.json();
         console.log(data); // Handle success response
         setErrorMessage('');
+        navigate('/login ');
       } else {
         const errorData = await response.json();
         console.error(errorData); // Handle error response
@@ -59,41 +60,48 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className='signup'>
       <form onSubmit={handleSubmit}>
-        <label>
-          Username:
+        <label >
+          {/* Username: */}
           <input
+          className='lb2'
             type="text"
             name="username"
+            placeholder='Username'
             value={formData.username}
             onChange={handleChange}
           />
         </label>
         <br />
-        <label>
-          Email:
+        <label >
+          {/* Email: */}
           <input
+          className='lb2'
             type="email"
             name="email"
+            placeholder='Email'
             value={formData.email}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Password:
+          {/* Password: */}
           <input
+          className='lb2'
             type="password"
             name="password"
+            placeholder='Password'
             value={formData.password}
             onChange={handleChange}
           />
         </label>
         <br />
-        <button type="submit">Sign Up</button>
+        <button type="submit" className='lg2'>Sign Up</button>
+        <br />
       </form>
-      <button onClick={handleLoginInClick}>Go to Login</button>
+      <button onClick={handleLoginInClick} className='lg2'>Go to Login</button>
 
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
     </div>
