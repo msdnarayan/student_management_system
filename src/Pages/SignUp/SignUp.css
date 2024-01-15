@@ -1,0 +1,47 @@
+
+.signup {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 20px;
+    
+    border-radius: 30px;
+    background: #d9d9e3;
+    box-shadow:  1px 1px 40px #c3c3cc,
+             -1px -1px 40px #efeffa;
+}
+  
+  
+  /* input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-top: 20px;
+  } */
+  
+  .lg2 {
+    background-color: #44364e;
+    color: #d1c5c5;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .lg2:hover {
+    background-color: #21151f;
+  }
+  .lg2, input {
+    font-size: 16px;
+  }
+  .lb2{
+    width: 345px;
+    padding: 10px 25px;
+  }
+  
+  
+  
