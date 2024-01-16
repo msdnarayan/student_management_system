@@ -20,11 +20,11 @@ const AttendanceList = () => {
 
   return (
     <div>
-      <h2>Attendance Records</h2>
-      <table>
+      <h2 className='hd3'>Attendance Records</h2>
+      <table className='atten'>
         <thead>
           <tr>
-            <th>AID</th>
+            {/* <th>AID</th> */}
             <th>Roll No</th>
             <th>Attendance</th>
           </tr>
@@ -32,7 +32,7 @@ const AttendanceList = () => {
         <tbody>
           {attendanceRecords.map((record) => (
             <tr key={record.aid}>
-              <td>{record.aid}</td>
+              {/* <td>{record.aid}</td> */}
               <td>{record.rollno}</td>
               <td>{record.attendance}</td>
             </tr>
